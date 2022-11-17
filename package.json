@@ -21,10 +21,11 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0",
+    "pnpm": ">=8"
   },
   "packageManager": "pnpm@7.14.2",
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,md}": "prettier --write"
+    "*.{ts,tsx,js,jsx,md,yml}": "prettier --write"
   }
 }
