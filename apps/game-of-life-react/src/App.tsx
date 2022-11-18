@@ -1,5 +1,7 @@
+import { GameOfLifeBoard } from "./components/GameOfLifeBoard";
+
 function App() {
-  return <div className="App"></div>;
+  return <GameOfLifeBoard />;
 }
 
 export default App;
