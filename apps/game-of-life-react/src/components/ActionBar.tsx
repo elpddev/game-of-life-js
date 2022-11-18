@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Button, Card, Slider, Stack, Text } from "@mantine/core";
 
-export function ActionBar() {
+export function ActionBar({
+  isOn,
+  onToggle,
+}: {
+  isOn: boolean;
+  onToggle: () => void;
+}) {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
 
@@ -34,7 +40,7 @@ export function ActionBar() {
 
         <Button>Reset</Button>
 
-        <Button>Start</Button>
+        <Button onClick={onToggle}>{isOn ? "Pause" : "Start"}</Button>
       </Stack>
     </Card>
   );
