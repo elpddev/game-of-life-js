@@ -1,18 +1,16 @@
 import { useMemo } from "react";
-import { SimpleGrid } from "@mantine/core";
+import { Board } from "../types/Board";
+import { ActionBar } from "./ActionBar";
+import { GameBoard } from "./GameBoard";
 
 export function GameOfLifeBoard() {
   const { board } = useGameOfLife();
-  return <Board board={board} />;
-}
-
-type Cell = boolean;
-
-type Row = Cell[];
-interface Board {
-  height: number;
-  width: number;
-  rows: Row[];
+  return (
+    <>
+      <ActionBar />
+      <GameBoard board={board} />
+    </>
+  );
 }
 
 function useGameOfLife() {
@@ -29,18 +27,4 @@ function useGameOfLife() {
   return {
     board,
   };
-}
-
-function Cell({ cell }: { cell: Cell }) {
-  return <div>{cell ? "true" : "false"}</div>;
-}
-
-function Board({ board }: { board: Board }) {
-  return (
-    <SimpleGrid cols={board.width} spacing="sm" verticalSpacing="sm">
-      {board.rows.flat().map((cell, index) => (
-        <Cell key={index} cell={cell} />
-      ))}
-    </SimpleGrid>
-  );
 }
