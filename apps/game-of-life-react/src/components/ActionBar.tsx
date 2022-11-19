@@ -26,7 +26,7 @@ export function ActionBar({
           onChange={onHeightChange}
           defaultValue={0}
           min={0}
-          max={20}
+          max={50}
           label={(value) => value.toFixed(1)}
           step={1}
         />
@@ -38,7 +38,7 @@ export function ActionBar({
           onChange={onWidthChange}
           defaultValue={0}
           min={0}
-          max={20}
+          max={50}
           label={(value) => value.toFixed(1)}
           step={1}
         />

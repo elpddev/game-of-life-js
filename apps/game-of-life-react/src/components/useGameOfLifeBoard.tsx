@@ -4,8 +4,8 @@ import { Cell } from "../types/Cell";
 import { useInterval } from "./useInterval";
 
 export function useGameOfLifeBoard() {
-  const [height, setHeight] = useState(8);
-  const [width, setWidth] = useState(8);
+  const [height, setHeight] = useState(30);
+  const [width, setWidth] = useState(30);
 
   const { board, moveNext } = useGameOfLife(height, width);
 
