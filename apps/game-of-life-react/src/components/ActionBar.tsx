@@ -3,14 +3,19 @@ import { Button, Card, Slider, Stack, Text } from "@mantine/core";
 
 export function ActionBar({
   isOn,
+  height,
+  width,
   onToggle,
+  onWidthChange,
+  onHeightChange,
 }: {
   isOn: boolean;
+  height: number;
+  width: number;
   onToggle: () => void;
+  onWidthChange: (width: number) => void;
+  onHeightChange: (width: number) => void;
 }) {
-  const [height, setHeight] = useState(0);
-  const [width, setWidth] = useState(0);
-
   return (
     <Card>
       <Stack spacing={20}>
@@ -18,7 +23,7 @@ export function ActionBar({
 
         <Slider
           value={height}
-          onChange={setHeight}
+          onChange={onHeightChange}
           defaultValue={0}
           min={0}
           max={20}
@@ -30,7 +35,7 @@ export function ActionBar({
 
         <Slider
           value={width}
-          onChange={setWidth}
+          onChange={onWidthChange}
           defaultValue={0}
           min={0}
           max={20}

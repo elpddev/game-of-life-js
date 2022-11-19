@@ -1,4 +1,4 @@
-import { MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from "@mantine/core";
 import { AppShell, Navbar, Header } from "@mantine/core";
 import { GameOfLifeBoard } from "./components/GameOfLifeBoard";
 
@@ -26,7 +26,9 @@ function App() {
           },
         })}
       >
-        <GameOfLifeBoard />
+        <Box sx={{ height: "100%" }}>
+          <GameOfLifeBoard />
+        </Box>
       </AppShell>
     </MantineProvider>
   );
