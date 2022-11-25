@@ -19,6 +19,7 @@ import {
 } from "./providers/GameOfLifeProvider";
 import { useContext, useState } from "react";
 import { GameBoard } from "./components/GameBoard";
+import React from "react";
 
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");

@@ -3,14 +3,15 @@ import federation from "@originjs/vite-plugin-federation";
 import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(async () => ({
+  // base: "/game-of-life-js/",
   plugins: [
     react(),
     federation({
-      name: "game-of-life-react",
-      filename: "game-of-life-react.js",
-      exposes: {
-        "./App": "./src/App",
+      name: "app",
+      remotes: {
+        "game-of-life-react":
+          "http://localhost:5001/game-of-life-js/assets/game-of-life-react.js",
       },
       shared: [
         "react",
@@ -22,19 +23,14 @@ export default defineConfig({
       ],
     }),
   ],
-  // base is needed for github pages deployment
-  base: "/game-of-life-js/",
   preview: {
     host: "localhost",
-    port: 5000,
+    port: 5001,
     strictPort: true,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
   },
   build: {
     target: "esnext",
     minify: false,
     cssCodeSplit: false,
   },
-});
+}));
