@@ -11,6 +11,7 @@ export default defineConfig({
       filename: "game-of-life-react.js",
       exposes: {
         "./App": "./src/App",
+        "./Game": "./src/Game",
       },
       shared: [
         "react",

@@ -13,6 +13,7 @@ export default defineConfig(async ({ command, mode }) => {
         name: "app",
         remotes: {
           "game-of-life-react": `${env.GAME_OF_LIFE_REACT_DOMAIN}${env.GAME_OF_LIFE_REACT_RESOURCE}`,
+          "game-of-life-vue": `${env.GAME_OF_LIFE_VUE_DOMAIN}${env.GAME_OF_LIFE_VUE_RESOURCE}`,
         },
         shared: [
           "react",
@@ -21,6 +22,7 @@ export default defineConfig(async ({ command, mode }) => {
           "@mantine/core",
           "@mantine/hooks",
           "@emotion/use-insertion-effect-with-fallbacks",
+          "vue",
         ],
       }),
     ],
