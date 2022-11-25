@@ -61,6 +61,9 @@ jobs:
           GAME_OF_LIFE_REACT_DOMAIN: "/game-of-life-js"
           GAME_OF_LIFE_REACT_RESOURCE: /game-of-life-react/game-of-life-react.js
           GAME_OF_LIFE_REACT_BASE: ""
+          GAME_OF_LIFE_VUE_DOMAIN: "/game-of-life-js"
+          GAME_OF_LIFE_VUE_RESOURCE: /game-of-life-vue/game-of-life-vue.js
+          GAME_OF_LIFE_VUE_BASE: ""
 
       - run: pnpm run pack-app-shell
 

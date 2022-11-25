@@ -20,6 +20,7 @@ import {
 import { useContext, useState } from "react";
 import { GameBoard } from "./components/GameBoard";
 import React from "react";
+import { Game } from "./Game";
 
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
