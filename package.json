@@ -11,7 +11,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pack-app-shell": "./scripts/pack-app-shell.mjs"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
@@ -27,5 +28,8 @@
   "packageManager": "pnpm@7.14.2",
   "lint-staged": {
     "*.{ts,tsx,js,jsx,md,yml}": "prettier --write"
+  },
+  "dependencies": {
+    "zx": "^7.1.1"
   }
 }

@@ -23,7 +23,7 @@ export default defineConfig({
     }),
   ],
   // base is needed for github pages deployment
-  base: "/game-of-life-js/",
+  base: process.env.GAME_OF_LIFE_REACT_BASE,
   preview: {
     host: "localhost",
     port: 5000,
