@@ -1,5 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "$APP_SHELL_BASE", 
+    "$GAME_OF_LIFE_REACT_BASE",
+    "$GAME_OF_LIFE_REACT_DOMAIN", 
+    "$GAME_OF_LIFE_REACT_RESOURCE"
+  ],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
