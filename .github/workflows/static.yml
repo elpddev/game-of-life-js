@@ -58,7 +58,7 @@ jobs:
       - run: pnpm turbo run build --api="http://127.0.0.1:9080" --token="${{ secrets.TURBO_SERVER_TOKEN }}" --team="acme"
         env:
           APP_SHELL_BASE: /game-of-life-js/
-          GAME_OF_LIFE_REACT_DOMAIN: ""
+          GAME_OF_LIFE_REACT_DOMAIN: "/game-of-life-js"
           GAME_OF_LIFE_REACT_RESOURCE: /game-of-life-react/game-of-life-react.js
           GAME_OF_LIFE_REACT_BASE: ""
 
